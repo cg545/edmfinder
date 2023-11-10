@@ -1,0 +1,39 @@
+.feed {
+  width: 80%;
+  margin: auto;
+}
+
+.colorArtist {
+  color: darkslategrey;
+}
+
+.eButton {
+  margin: auto;
+  padding: 5px;
+}
+
+.tc1 {
+  width: 15%;
+}
+
+.tc2 {
+  width: 25%;
+}
+
+.reglogo {
+  width: 20%;
+}
+
+.nothingShown {
+  padding-top: 40px;
+  margin: auto;
+}
+
+.edmtlogo {
+  width: 20%;
+  cursor: pointer;
+}
+
+.commentModal {
+  width: 60vh;
+}

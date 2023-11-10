@@ -1,0 +1,35 @@
+.registerBox {
+  width: 380px;
+  margin: auto;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.registerForm {
+  width: 340px;
+  height: 500px;
+  margin: auto;
+}
+
+.registerLogin {
+  width: 380px;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.sloganPara {
+  margin: 8%;
+}
+
+.message {
+  color: red;
+}
+
+.goodMessage {
+  color: green;
+}
+
+.reglogo {
+  width: 60%;
+}

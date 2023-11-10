@@ -1,0 +1,20 @@
+.navlogo {
+  width: 220px;
+}
+
+.username {
+  color: darkblue;
+}
+
+.blueText {
+  color: blue;
+}
+
+.sanitizeLink {
+  color: black;
+  text-decoration: none;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}

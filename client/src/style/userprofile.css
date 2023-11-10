@@ -1,0 +1,46 @@
+.row {
+  display: flex;
+}
+
+.col-1 {
+  flex: .8;
+  padding-right: 40px;
+  margin-right: 40px;
+  padding-left: 40px;
+  margin-left: 40px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.col-2 {
+  flex: 1.8;
+}
+
+.profilePicture {
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+  border: 3px black solid;
+}
+
+.profileUsername {
+  color: blue;
+  font-size: larger;
+}
+
+.profileState {
+  font-size: large;
+}
+
+.profileBio {
+  font-size: large;
+  height: 40vh;
+}
+
+.threadCol {
+  height: 100vh;
+}
+
+.commentCol {
+  height: 100vh;
+}

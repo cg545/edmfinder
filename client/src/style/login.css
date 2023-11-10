@@ -1,0 +1,16 @@
+.loginBox {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: auto;
+}
+
+.reglogo {
+  width: 60%;
+}
+
+.loginMessage {
+  color: red;
+  font-size: large;
+}

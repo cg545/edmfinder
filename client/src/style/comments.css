@@ -1,0 +1,52 @@
+.commentWindow {
+  height: 60vh;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.commentBox {
+  width: 100%;
+}
+
+.commentCard {
+  margin-right: 8px;
+  width: 100%;
+}
+
+.commentRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.commentCol {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  border-style: inset;
+  padding: 2px;
+  margin: 2px;
+  margin-right: 4px;
+}
+
+.commentPhoto {
+  width: 10vh;
+  height: 10vh;
+  margin: 3px;
+  padding: 3px;
+}
+
+.profileLink {
+  margin: auto;
+  text-decoration: none;
+  font-weight: 1000;
+}
+
+.datePosted {
+  margin: auto;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.postCommentBox {
+  width: 100px;
+}
