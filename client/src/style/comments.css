@@ -50,3 +50,7 @@
 .postCommentBox {
   width: 100px;
 }
+
+.redText {
+  color: red;
+}

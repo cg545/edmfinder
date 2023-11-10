@@ -51,7 +51,7 @@ function Navigation({ }) {
             storeLoginInfo([{ username: response.data.username, email: response.data.email }]);
           } else {
             storeLoginInfo([]);
-            localStorage.removeItem("socialtoken");
+            localStorage.removeItem("edmfindertoken");
           }
         })
         .catch((err) => {

@@ -66,7 +66,7 @@ app.post("/api/login", async (req, res) => {
           "edmfindertoken",
           { expiresIn: "24h", }
         );
-        collection.updateOne(
+        await collection.updateOne(
           { "email": user.email },
           { $set: { "token": token } }
         );
@@ -207,8 +207,53 @@ app.get("/api/loadComments/:commentId", async (req, res) => {
   var results = await collection.find({
     eventId: parseInt(req.params.commentId)
   }).toArray();
-  console.log(results);
   return res.status(200).send(results);
+});
+
+/**
+ * newComment: adds comment to db with given event ID, poster, and date. Sends back the updated comment list.
+ */
+app.post("/api/newComment/:eventId", async (req, res) => {
+  console.log("push");
+  try {
+    var eventId = parseInt(req.params.eventId);
+    var poster = req.body.poster;
+    var datePosted = req.body.datePosted;
+    var theComment = req.body.body;
+    console.log("eventId " + eventId + "poster " + poster + "datePosted " + datePosted + "theComment " + theComment)
+    //first, validate the inputs
+    if (poster && datePosted && theComment) {
+      //ensure poster exists
+      var collection = db.collection("users");
+      var theUser = await collection.findOne({
+        username: poster
+      });
+      if (theUser) {
+        var collection = db.collection("comments");
+        await collection.insertOne(
+          {
+            "eventId": eventId,
+            "datePosted": datePosted,
+            "poster": poster,
+            "body": theComment
+          }
+        );
+        var collection = db.collection("comments");
+        var results = await collection.find({
+          eventId: parseInt(eventId)
+        }).toArray();
+        return res.status(200).send(results);
+      } else {
+        console.log("bad user");
+        return; //fake user
+      }
+    } else {
+      console.log("somthing wrong with inputs");
+      return; //something wrong with inputs
+    }
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 /**
